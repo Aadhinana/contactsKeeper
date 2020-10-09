@@ -1,0 +1,26 @@
+{
+  "name": "contacts_keeper",
+  "version": "1.0.0",
+  "description": "API for CRUD of contacts for different users",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^5.3.0",
+    "config": "^3.3.2",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.8"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "serverdev": "nodemon server.js",
+    "clientdev": "npm start --prefix client",
+    "dev": "concurrently \"npm run serverdev\" \"npm run clientdev\" ",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "",
+  "license": "ISC"
+}
